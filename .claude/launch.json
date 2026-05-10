@@ -5,8 +5,7 @@
       "name": "kyomei-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "port": 3003,
-      "autoPort": true
+      "port": 3003
     }
   ]
 }

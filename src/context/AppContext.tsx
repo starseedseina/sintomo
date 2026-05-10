@@ -29,16 +29,7 @@ interface AppContextValue {
   removeConnection: (userId: string) => void;
   startConversation: (userId: string) => void;
   updatePrivacySettings: (settings: Partial<PrivacySettings>) => void;
-  updateProfile: (fields: {
-    name?: string;
-    realName?: string;
-    age?: number;
-    gender?: string;
-    occupation?: string;
-    tagline?: string;
-    cherished?: string;
-    fieldVisibility?: ProfileFieldVisibility;
-  }) => void;
+  updateProfile: (fields: Partial<CurrentUser>) => void;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);

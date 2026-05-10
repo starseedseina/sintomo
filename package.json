@@ -1,0 +1,8 @@
+{
+  "name": "shinyu-app-root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd /Users/korenagaseina/kyomei-app && npm run dev"
+  }
+}

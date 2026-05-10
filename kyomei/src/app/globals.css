@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "tailwindcss/theme" layer(theme);
+
+@theme {
+  /* カラーパレット */
+  --color-kyomei-cream: #F5F0E8;
+  --color-kyomei-white: #FDFBF7;
+  --color-kyomei-border: #E8E4DC;
+  --color-kyomei-sage: #7A8B6F;
+  --color-kyomei-sage-light: #9DAE90;
+  --color-kyomei-sage-dark: #5C6B54;
+  --color-kyomei-dark: #2C2B29;
+  --color-kyomei-muted: #8C8880;
+  --color-kyomei-light: #B8B4AC;
+
+  /* フォント */
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Noto Serif JP", "Hiragino Mincho ProN", Georgia, serif;
+
+  /* アニメーション */
+  --animate-fade-in: fadeIn 0.3s ease-in-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+:root {
+  --background: #F5F0E8;
+  --foreground: #2C2B29;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* スクロールバー非表示 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ♡気になる パーティクルアニメーション */
+@keyframes heartFloat {
+  0%   { opacity: 1; transform: translateX(0) translateY(0) scale(1); }
+  60%  { opacity: 0.8; transform: translateX(0) translateY(-36px) scale(1.2); }
+  100% { opacity: 0; transform: translateX(0) translateY(-60px) scale(0.8); }
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
